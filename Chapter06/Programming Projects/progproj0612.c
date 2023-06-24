@@ -27,5 +27,3 @@ int main(void)
 
     return 0;
 }
-
-// The largest integer that we can enter for n seems to be 65, for values greater than that we get "inf" as a result.
