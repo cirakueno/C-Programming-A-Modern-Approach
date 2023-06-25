@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    int i, j, n;
+    int i, j;
     unsigned long long factorial = 1;
     long double sum = 1.0;
     long double epsilon;
