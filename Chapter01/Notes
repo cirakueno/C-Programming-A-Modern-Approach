@@ -1,0 +1,43 @@
+C's underlying philosophy:
+    1. C is a low-level language.
+    2. C is a small language.
+    3. C is a permissive language.
+    
+C's strenghts:
+    1. Efficiency. 
+    2. Portability.
+    3. Power.
+    4. Flexibility.
+    5. Standard library.
+    6. Integration with UNIX.
+    
+C's weaknesses:
+    1. C programs can be error-prone.
+    2. C programs can be difficult to understand.
+    3. C programs cam be difficult to modify.
+   
+Effective use of C:
+    1. Learn how to avoid C's pitfalls.
+    2. Use software tools to make programs more reliable.
+    3. Take advantage of existing code libraries.
+    4. Adopt a sensible set of coding conventions.
+    5. Avoid "tricks" and overly complex code.
+    6. Stick to the standard.
+    
+    
+    
+    
+    
+    
+
+
+
+Addition:
+    I. On linux use the following commands to install the lint tools:
+        sudo apt install splint      # Install Splint
+        sudo apt install cppcheck    # Install cppcheck
+        sudo apt install clang-Tidy  # Install Clang-tidy
+    II. Use the following to run the tools for a program named "myprogram.c":
+        splint myprogram.c
+        cppcheck --enable=all myprogram.c
+        clang-tidy myprogram.c -- -std=c99
