@@ -1,0 +1,5 @@
+(a) for     -> Keyword
+(b) If      -> Not a keyword. Lowercase 'if' is a keyword but C is case-sensitive, so 'If' and 'if' have different meaning.
+(c) main    -> Not a keyword. 'main' is a special function in C but not a keyword.
+(d) printf  -> Not a keyword. 'printf' is a standard library function, not a keyword.
+(e) while   -> Keyword

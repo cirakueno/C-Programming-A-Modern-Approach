@@ -1,0 +1,4 @@
+Original:
+    answer=(3*q-p*p)/3;
+Formatted:
+    answer = (3 * q - p * p) / 3;

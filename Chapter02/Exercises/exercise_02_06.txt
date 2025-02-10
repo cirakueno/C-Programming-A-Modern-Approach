@@ -1,0 +1,3 @@
+It is not a good idea to use more than one adjacent underscores because it becomes difficult to distinguish if 2 or more underscores are being used. In the best case the program will fail
+if we use a variable that does not exist. And if declare same variable names with different amount of underscores (for example, one_bottle__ vs. one_bottle_) the program might not fail 
+but the use might not be what we had in mind, since we might easily use one variable when we intended to use the other.

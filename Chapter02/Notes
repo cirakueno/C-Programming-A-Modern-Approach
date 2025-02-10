@@ -1,0 +1,47 @@
+Basic explanation of the following code:
+#include <stdio.h>
+
+int main(void)
+{
+    print("To C, or not ot C: that is the question.\n");
+    return 0;
+}
+
+#include <stdio.h>      is necessary to "include" information about C's standard I/O (input/output) library.
+main                    The program's executable code goes inside main, which represents the "main" program.
+printf 			is a function from the standard I/O library that can produce nicely formatted output.
+return O;		indicates that the program "returns" the value 0 to the operating system when it terminates.
+
+
+How to run a C program?
+After you have created a file created with the .c extension, the C program goes through three major stages:
+    1. Preprocessing. 	The program is first given to a preprocessor, which obeys commands that begin with # (known as directives).
+    2. Compiling. 	The modified program now goes to a compiler, which translates it into machine instructions (object code).
+    3. Linking. 	In the final step, a linker combines the object code produced by the compiler with any additional code needed to yield a complete executable program. This additional code includes Library functions (like printf) that are used in the program.
+    
+ To compile and link the pun.c program, enter the following command in a terminal or command-line window:
+ cc pun.c
+ After compiling and linking the program, cc leaves the executable program in a file na1ned a.out by default. If we want the executable version of pun.c to be named pun, we would enter the following command:
+ cc -o pun pun.c
+ 
+Two types of comments:
+    1. /* */   	- Anything between these symbols is ignored by the compiler. This can span multiple lines as well.
+    2. // 	- Anything after this till the end of the line is ignored.
+    
+Declaration of a variable:
+    type variable_name;
+    1. int age;
+    2. float height;
+    
+Assignment happens after declaration:
+    variable_name = value;
+    1. age = 31;
+    2. height = 1.80;
+    
+Macro declaration:
+    #define MACRO_NAME value
+    1. #define INCHES_PER_POUND 166
+    2. #define RECIPROCAL_OF_PI (1.0f / 3.14159f)
+If it contains operators; the expression should be enclosed in parentheses.
+
+Tokens 	- Groups of characters that can't be split up without changing their meaning.
