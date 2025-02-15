@@ -1,0 +1,24 @@
+The printf Function
+
+The printf function is designed to display Lhe contents of a string. known as the format string, with values possibly inserted at specified points in the string. When it's called, 
+printf must be supplied with the format string, followed by any values that are to be inserted into the string during printing:
+    printf(string, expr1, expr2, ...);
+    
+The format string may contain both ordinary characters and conversion specifications, which begin with the % character. A conversion specification is a placeholder representing a value to be filled in during printing. The information that follows the % character specifies bow the value is converted from its internal form (binary) to printed form (characters)-that's where the term 'conversion specification" comes from. For example, the conversion specification %d specifies that printf is to convert an int value from binary to a string of decimal digits, while %f does the same for a float value.
+
+In Chapter 2, we saw that a conversion specification can include formatting information. In particular, we used %.1f to display a float value with one digit after the decimal point. More generally, a conversion specification can have the form %m.pX or %-m.pX, where m and p are integer constants and X is a letter. Both m and p are optional; if p is omitted, the period that separates m and p is also dropped. In the conversion specification %10.2f m is 10, p is 2. and X is f. In the specification %10f, m is 10 and p (along with the period) is missing, but in the specification %.2f, p is 2 and m is missing.
+The minimum field width m, specifies the minimum number of characters to print. If the value to be printed requires fewer than m characters, the value is right-justified within the field. (In other words, extra spaces precede the value.) For example, the specification %4d would display the number 123 as •123. (In this chapter, I'll use • to represent the space character.) If the value to be printed requires more than m characters, the field width automatically expands to the necessary size. Thus, the specification %4d would display the number 12345 as 12345-no digits are lost. Putting a minus sign in front of m causes left justification; the specification %-4d would display 123 as 123•.
+The meaning of the precision, p, isn't as easily described, since it depends on the choice of X, the conversion specifier. X indicates which conversion should be applied to the value before it's printed. The most common conversion specifiers for numbers are:
+    • d - Displays an integer in decimal (base 10) form. p indicates the minimum number of digits to display (extra zeros are added to the beginning of the number if necessary); if p is omitted, it is assumed to have the value 1. (In other words, %d is the same as %.1d.)
+    • e - Displays a floating-point number in exponential format (scientific notation). p indicates how many digits should appear after the decimal point (the default is 6). If p is 0, the decimal point is not displayed.
+    • f - Displays a floating-point number in "fixed decimal" format, without an exponent. p has the same meaning as for the e specifier.
+    • g - Displays a floating-point number in either exponential format or fixed decimal format, depending on the number's size. p indicates the maximum number of significant digits (not digits after the decimal point) to be displayed. Unlike the f conversion, the g conversion won't show trailing zeros. Furthermore, if the value to be printed has no digits after the decimal point, g doesn't display the decimal point.
+    
+    
+    
+ 
+The scanf Function
+
+scanf is essentially a "pattern-matching" function that tries to match up groups of input characters with conversion specifications.
+Like the printf function, scanf is controlled by the format string. When it is called, scanf begins processing the information in the string, starting at the left. For each conversion specification in the format string, scanf tries to locate an item of the appropriate type in the input data, skipping blank space if necessary. scanf then reads the item, stopping when it encounters a character that can't possibly belong to the item. If the item was read successfully, scanf continues processing the rest of the format string. If any item is not read successfully, scanf returns immediately without looking at the rest of the format string (or the remaining input data).
+As it searches for the beginning of a number, scanf ignores white-space characters (the space, horizontal and vertical tab, form-feed, and new-line characters). As a result, numbers can be put on a single line or spread out over several lines.
